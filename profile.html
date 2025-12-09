@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time&Master | Мой профиль</title>
+    <!-- Подключаем шрифты и иконки -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Подключаем наши стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="LogoDark.png" alt="Логотип Time&Master">
+                <h1>Time&Master</h1>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link" title="На главную"><i class="fas fa-home"></i></a>
+            <a href="sleep-calculator.html" class="nav-link" title="Калькулятор сна"><i class="fas fa-calculator"></i></a>
+            <a href="profile.html" class="nav-link active" title="Профиль"><i class="fas fa-user-circle"></i></a>
+            <a href="#" class="nav-link" title="Настройки"><i class="fas fa-cog"></i></a>
+        </nav>
+    </header>
+    
+    <!-- Боковые декорации -->
+    <div class="left-decoration"></div>
+    <div class="right-decoration"></div>
+    
+    <!-- Основной контейнер с контентом -->
+    <div class="container">
+        
+        <div class="instructions">
+            <h2>Мой профиль</h2>
+            <p>Заполните информацию о себе, чтобы мы могли лучше адаптировать сервис под ваши потребности.</p>
+        </div>
+
+        <div class="profile-form-container">
+            <form id="profile-form" class="profile-form">
+                <div class="form-group">
+                    <label for="firstName">Имя *</label>
+                    <input type="text" id="firstName" name="firstName" required placeholder="Введите ваше имя">
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Фамилия *</label>
+                    <input type="text" id="lastName" name="lastName" required placeholder="Введите вашу фамилию">
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Возраст</label>
+                    <input type="number" id="age" name="age" min="10" max="100" placeholder="Ваш возраст">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="example@mail.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (XXX) XXX-XX-XX">
+                </div>
+
+                <div class="form-group">
+                    <label for="occupation">Род занятий</label>
+                    <select id="occupation" name="occupation">
+                        <option value="">Выберите вариант</option>
+                        <option value="student">Студент</option>
+                        <option value="worker">Работник</option>
+                        <option value="freelancer">Фрилансер</option>
+                        <option value="entrepreneur">Предприниматель</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="bio">О себе</label>
+                    <textarea id="bio" name="bio" rows="4" placeholder="Расскажите немного о себе, своих целях и интересах..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Сохранить профиль</button>
+                    <button type="reset" class="btn-secondary">Очистить форму</button>
+                </div>
+            </form>
+
+            <div id="profile-preview" class="profile-preview hidden">
+                <h3>Предпросмотр профиля</h3>
+                <div class="preview-content">
+                    <div class="preview-field">
+                        <strong>Имя:</strong> <span id="preview-firstName"></span>
+                    </div>
+                    <div class="preview-field">
+                        <strong>Фамилия:</strong> <span id="preview-lastName"></span>
+                    </div>
+                    <div class="preview-field">
+                        <strong>Возраст:</strong> <span id="preview-age"></span>
+                    </div>
+                    <div class="preview-field">
+                        <strong>Email:</strong> <span id="preview-email"></span>
+                    </div>
+                    <div class="preview-field">
+                        <strong>Телефон:</strong> <span id="preview-phone"></span>
+                    </div>
+                    <div class="preview-field">
+                        <strong>Род занятий:</strong> <span id="preview-occupation"></span>
+                    </div>
+                    <div class="preview-field full-width">
+                        <strong>О себе:</strong> <span id="preview-bio"></span>
+                    </div>
+                </div>
+                <button id="edit-profile" class="btn-secondary">Редактировать</button>
+            </div>
+        </div>
+
+        <div class="info-blocks">
+            <article class="info-card">
+                <h3>Зачем нужен профиль?</h3>
+                <p>Создав профиль, вы помогаете нам адаптировать рекомендации по тайм-менеджменту под ваш образ жизни, возраст и цели. Это делает наши советы более персонализированными и эффективными.</p>
+            </article>
+            <article class="info-card">
+                <h3>Безопасность данных</h3>
+                <p>Мы серьезно относимся к защите ваших персональных данных. Вся информация хранится в зашифрованном виде и не передается третьим лицам. Вы всегда можете удалить свой профиль.</p>
+            </article>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Time & Master. Создано с умом.</p>
+    </footer>
+
+    <!-- Подключаем наш скрипт -->
+    <script src="profile.js"></script>
+</body>
+</html>

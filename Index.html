@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time&Master | Главная</title>
+    <!-- Подключаем шрифты и иконки -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Подключаем наши стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="site-header">
+        <div class="logo">
+            <a href="#">
+                <img src="LogoDark.png" alt="Логотип Time&Master">
+                <h1>Time&Master</h1>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <a href="#" class="nav-link" title="На главную"><i class="fas fa-home"></i></a>
+            <a href="sleep-calculator.html" class="nav-link" title="Калькулятор сна"><i class="fas fa-calculator"></i></a>
+            <a href="profile.html" class="nav-link" title="Профиль"><i class="fas fa-user-circle"></i></a>
+            <a href="#" class="nav-link" title="Настройки"><i class="fas fa-cog"></i></a>
+        </nav>
+    </header>
+    
+    <!-- Боковые декорации -->
+    <div class="left-decoration"></div>
+    <div class="right-decoration"></div>
+    
+    <!-- Основной контейнер с контентом -->
+    <div class="container">
+        
+        <div class="instructions">
+            <h2>Как это работает?</h2>
+            <ol>
+                <li>Нажмите <strong>"Заполнить неделю"</strong>, чтобы управлять таблицей.</li>
+                <li>Заполните свои планы и желаемое время отдыха на каждый день.</li>
+                <li>Нажмите <strong>"Рассчитать"</strong>, чтобы увидеть итоговые значения!</li>
+            </ol>
+        </div>
+
+        <div class="info-blocks">
+            <article class="info-card">
+                <h3>Что такое "Тайм-Мастер"?</h3>
+                <p>Это не просто таблица. Это ваш первый шаг к осознанному управлению самым ценным ресурсом — временем. Мы помогаем визуализировать вашу неделю, чтобы вы могли видеть не только задачи, но и возможности для отдыха и развития.</p>
+            </article>
+            <article class="info-card">
+                <h3>Как этот сайт вам поможет?</h3>
+                <p>Структурируя свои планы, вы снижаете стресс и повышаете продуктивность. Наш инструмент позволяет легко сбалансировать учебу, хобби и отдых, предотвращая выгорание и помогая вам достигать своих целей без ущерба для здоровья.</p>
+            </article>
+        </div>
+
+        <div class="controls">
+            <button id="toggle-table-btn">Заполнить неделю</button>
+            <button id="load-table-btn" disabled>Загрузить (в разработке)</button>
+            <button id="faq-btn">FAQ</button>
+        </div>
+
+        <div id="table-wrapper" class="hidden"> <!-- Новый контейнер-обертка -->
+            <div id="table-container">
+                <!-- Сюда JS вставит таблицу -->
+            </div>
+            
+            <div class="calculation-controls">
+                <button id="calculate-btn">Рассчитать</button>
+            </div>
+
+            <div id="results-container">
+                <!-- Сюда JS вставит результаты расчета -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Time & Master. Создано с умом.</p>
+    </footer>
+
+    <!-- Подключаем наш скрипт -->
+    <script src="script.js"></script>
+</body>
+</html>

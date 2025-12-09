@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time&Master | Калькулятор сна</title>
+    <!-- Подключаем шрифты и иконки -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Подключаем наши стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="LogoDark.png" alt="Логотип Time&Master">
+                <h1>Time&Master</h1>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link" title="На главную"><i class="fas fa-home"></i></a>
+            <a href="sleep-calculator.html" class="nav-link active" title="Калькулятор сна"><i class="fas fa-calculator"></i></a>
+            <a href="profile.html" class="nav-link" title="Профиль"><i class="fas fa-user-circle"></i></a>
+            <a href="#" class="nav-link" title="Настройки"><i class="fas fa-cog"></i></a>
+        </nav>
+    </header>
+    
+    <!-- Боковые декорации -->
+    <div class="left-decoration"></div>
+    <div class="right-decoration"></div>
+    
+    <!-- Основной контейнер с контентом -->
+    <div class="container">
+        
+        <div class="instructions">
+            <h2>Как работает калькулятор сна?</h2>
+            <ol>
+                <li>Введите время, когда вы планируете лечь спать</li>
+                <li>Нажмите "Рассчитать", чтобы увидеть оптимальное время подъема</li>
+                <li>Калькулятор учитывает полные циклы сна (по 90 минут)</li>
+            </ol>
+        </div>
+
+        <div class="sleep-calculator">
+            <div class="calculator-form">
+                <h3>Калькулятор оптимального сна</h3>
+                <div class="input-group">
+                    <label for="bedtime">Во сколько вы планируете лечь спать?</label>
+                    <input type="time" id="bedtime" value="23:00">
+                </div>
+                <button id="calculate-sleep">Рассчитать время подъема</button>
+            </div>
+            
+            <div id="sleep-results" class="results hidden">
+                <h3>Рекомендуемое время подъема:</h3>
+                <div id="wakeup-times"></div>
+            </div>
+        </div>
+
+        <div class="info-blocks">
+            <article class="info-card">
+                <h3>Почему важен полноценный сон?</h3>
+                <p>Качественный сон улучшает память, концентрацию и общее состояние здоровья. Оптимальная продолжительность сна для взрослого человека составляет 7-9 часов, при этом важно просыпаться между циклами сна (каждые 90 минут).</p>
+            </article>
+            <article class="info-card">
+                <h3>Как использовать результаты?</h3>
+                <p>Выберите время подъема, которое лучше всего подходит вашему расписанию. Просыпаться между циклами сна (через 6, 7.5 или 9 часов) поможет вам чувствовать себя более отдохнувшим, даже если общее время сна будет меньше.</p>
+            </article>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Time & Master. Создано с умом.</p>
+    </footer>
+
+    <!-- Подключаем наш скрипт -->
+    <script src="sleep-calculator.js"></script>
+</body>
+</html>
